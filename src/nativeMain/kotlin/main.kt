@@ -28,7 +28,7 @@ fun modifyVisibility(comment: Comment?): Comment? {
         for (reply in comment.replies) {
             val modifiedReply = modifyVisibility(reply)
             if (modifiedReply != null) {
-                replyList.add(modifiedReply)
+                replyList.add(modifiedReply.copy(isVisibleInTree = true))
             }
         }
         return comment.copy(isVisibleInTree = true, replies = replyList)
