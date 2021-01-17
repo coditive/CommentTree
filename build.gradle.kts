@@ -8,6 +8,10 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
 }
+dependencies {
+    commonMainImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
+    commonMainImplementation("junit:junit:4.12")
+}
 
 kotlin {
     val hostOs = System.getProperty("os.name")
